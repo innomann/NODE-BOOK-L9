@@ -6,6 +6,7 @@ const app = express();
 const homeController = require('./controllers/home')
 const aboutController = require('./controllers/about')
 const contactController = require('./controllers/contact')
+const createController = require('./controllers/create')
 const postController = require('./controllers/post')
 
 //EJS
@@ -16,6 +17,7 @@ app.use(express.static('public'));
 app.get('/',homeController)
 app.get('/about',aboutController)
 app.get('/contact',contactController)
+app.get('/create',createController)
 app.get('/post',postController)
 
 const PORT = process.env.PORT || 7000
